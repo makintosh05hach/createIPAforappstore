@@ -7,9 +7,9 @@ workflows:
       groups:
         - signing            # CERTIFICATE_P12, CERTIFICATE_PASSWORD, MOBILEPROVISION
       vars:
-        XCODE_PROJECT: "Quiz Cosmos.xcodeproj"   # или задай XCODE_WORKSPACE вместо XCODE_PROJECT
-        XCODE_SCHEME: "Quiz Cosmos"
-        BUNDLE_ID: "com.stellarglow.spectrum"
+        XCODE_PROJECT: "Project-16-12-25-2.xcodeproj"   # или задай XCODE_WORKSPACE вместо XCODE_PROJECT
+        XCODE_SCHEME: "Project-16-12-25-2"
+        BUNDLE_ID: "com.PriceKeeper.malia"
         TEAM_ID: "OVERRIDE_BY_PROFILE"        # заменится значением из профиля
         EXPORT_METHOD: "app-store"
         # APP_VERSION: "1.1"
@@ -110,7 +110,7 @@ workflows:
 
       - name: "Archive and export IPA (xcodebuild)"
         script: |
-          ARCHIVE_PATH="$CM_BUILD_DIR/Quiz Cosmos.xcarchive"
+          ARCHIVE_PATH="$CM_BUILD_DIR/Project-16-12-25-2.xcarchive"
           EXPORT_PATH="$CM_EXPORT_DIR"
 
           # Доп. флаги версий прямо в xcodebuild (работает без Info.plist)
